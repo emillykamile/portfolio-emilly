@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Portfolio Details</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Favicons -->
+  <link href="assets/img/Logo-EK.png" rel="icon">
+  <link href="assets/img/Logo-EK.png" rel="apple-touch-icon">
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <style>
+    .scrollable-image-container {
+      position: relative;
+      max-height: 80vh;
+      overflow-y: auto;
+      border: 1px solid #ddd;
+    }
+
+    .scrollable-image-container img {
+      width: 100%;
+      display: block;
+    }
+
+    .scroll-indicator {
+      position: absolute;
+      bottom: 10px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.5);
+      border-radius: 50%;
+      padding: 10px;
+      cursor: pointer;
+    }
+
+    .scroll-indicator i {
+      color: #fff;
+      font-size: 24px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <main id="main">
+    <div class="container">
+
+      <!-- Projeto 2 -->
+      <div id="project-2-details" class="portfolio-details">
+        <div class="row">
+          <div class="col-lg-8">
+            <h2 class="portfolio-title">Detalhes do Sistema de Gerenciamento de Processos Jurídicos</h2>
+            <div class="scrollable-image-container">
+              <img src="assets/img/case-study/case-study-exyon.jpg" alt="Case Study" class="img-fluid">
+              <div class="scroll-indicator" onclick="scrollImage('project-2')">
+                <i class="bx bx-down-arrow-alt"></i>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 portfolio-info-2">
+            <h3>Informações do Produto</h3>
+            <ul>
+              <li><strong>Categoria</strong>: UX/UI </li>
+              <li><strong>Cliente</strong>: E-Xyon</li>
+              <li><strong>Duração</strong>: Abril de 2024 - Maio 2024. | 05 dias.</li>
+              <li><strong>URL do Projeto</strong>:
+                <a href="https://www.figma.com/file/nfJU6SbyCzXE18LxC2w0Db/User-flows---E-xyon--%7C-Sistema-de-gerenciamento-de-processos-jur%C3%ADdicos.?type=design&node-id=120%3A2532&mode=design&t=oJPIJAvb850kZ4SO-1"
+                  target="_blank" title="Visitar Website">
+                  <i class="bx bx-globe"></i> Link do Protótipo
+                </a>
+              </li>
+            </ul>
+            <p>
+              O case consiste em um sistema de gerenciamento de processos jurídicos, onde é possível o usuário ter
+              conta
+              no sistema e esse usuário pode estar associado a 3 empresas diferentes,
+              com diferentes níveis de acesso. No case, fui responsável por criar o User Flow do usuário no sistema,
+              Mapa da Empatia, User Persona, Style Guide e Interface/Protótipo Navegável.
+            </p>
+          </div>
+        </div>
+      </div><!-- End Project 2 Details -->
+
+      <!-- Adicione mais projetos conforme necessário -->
+
+    </div>
+  </main><!-- End #main -->
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/purecounter/purecounter_vanilla.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/glightbox/js/glightbox.min.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/swiper/swiper-bundle.min.js"></script>
+  <script src="assets/vendor/waypoints/noframework.waypoints.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- Inicialize o glightbox -->
+  <script>
+    const lightbox = GLightbox({
+      selector: '.portfolio-details-lightbox'
+    });
+
+    function scrollImage(projectId) {
+      const container = document.querySelector(`#${projectId}-details .scrollable-image-container`);
+      container.scrollBy({
+        top: container.clientHeight / 2,
+        behavior: 'smooth'
+      });
+    }
+  </script>
+</body>
+
+</html>
