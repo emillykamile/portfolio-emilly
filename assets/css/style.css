@@ -19,6 +19,89 @@ body::before {
   z-index: -1;
 }
 
+.menu-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.animated-heading {
+  text-align: flex-start;
+  font-weight: bold;
+  margin: 0;
+}
+
+.highlight {
+  color: #cf0ccf;
+}
+
+.static-text {
+  font-size: 1.5rem;
+}
+
+.static-text-1 {
+  font-size: 2.5rem;
+}
+
+.typing-text {
+  font-size: 2rem;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  animation: typing 3s steps(10, end) forwards, blink-caret .75s step-end infinite;
+}
+
+@keyframes typing {
+  0% {
+    width: 0;
+  }
+
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink-caret {
+
+  from,
+  to {
+    border-color: transparent;
+  }
+
+  50% {
+    border-color: black;
+  }
+}
+
+@keyframes deleting {
+  0% {
+    width: 100%;
+  }
+
+  100% {
+    width: 0;
+  }
+}
+
+.typing-text {
+  font-size: 2rem;
+  font-weight: 800;
+  white-space: nowrap;
+  overflow: hidden;
+  border-right: 2px solid;
+  animation: typing 3s steps(20, end), blink-caret .75s step-end infinite;
+}
+
+.typing-text::after {
+  content: "";
+  display: inline-block;
+  width: 0;
+  animation: deleting 1s steps(20, end) infinite;
+  animation-delay: 0s;
+}
+
+
 @media (min-width: 1024px) {
   body::before {
     background-attachment: fixed;
@@ -62,7 +145,7 @@ h6 {
 }
 
 #header h1 {
-  font-size: 48px;
+  font-size: 30px;
   margin: 0;
   padding: 0;
   line-height: 1;
@@ -72,13 +155,13 @@ h6 {
 
 #header h1 a,
 #header h1 a:hover {
-  color: #cc14cc;
+  color: #ffffff;
   line-height: 1;
   display: inline-block;
 }
 
 #header h2 {
-  font-size: 24px;
+  font-size: 21px;
   margin-top: 20px;
   font-weight: 500;
   color: #f1f1f1;
