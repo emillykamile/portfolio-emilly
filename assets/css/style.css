@@ -49,7 +49,9 @@ body::before {
   white-space: nowrap;
   overflow: hidden;
   border-right: 2px solid;
-  animation: typing 3s steps(10, end) forwards, blink-caret .75s step-end infinite;
+  width: 22ch;
+  /* Define the width based on the length of the text */
+  animation: typing 4s steps(22, end) 1s infinite normal both, blink-caret .75s step-end infinite;
 }
 
 @keyframes typing {
@@ -57,8 +59,13 @@ body::before {
     width: 0;
   }
 
+  50% {
+    width: 22ch;
+    /* Set this to the length of your text */
+  }
+
   100% {
-    width: 100%;
+    width: 0;
   }
 }
 
@@ -70,37 +77,9 @@ body::before {
   }
 
   50% {
-    border-color: black;
+    border-color: #fff;
   }
 }
-
-@keyframes deleting {
-  0% {
-    width: 100%;
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-.typing-text {
-  font-size: 2rem;
-  font-weight: 800;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid;
-  animation: typing 3s steps(20, end), blink-caret .75s step-end infinite;
-}
-
-.typing-text::after {
-  content: "";
-  display: inline-block;
-  width: 0;
-  animation: deleting 1s steps(20, end) infinite;
-  animation-delay: 0s;
-}
-
 
 @media (min-width: 1024px) {
   body::before {
