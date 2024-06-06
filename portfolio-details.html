@@ -30,6 +30,33 @@
   <link href="assets/css/style.css" rel="stylesheet">
 
   <style>
+    /* Custom scrollbar for the entire page */
+    body {
+      scrollbar-color: #cccccc #f5f5f5;
+      scrollbar-width: thin;
+    }
+
+    /* Custom scrollbar for all scrollable elements */
+    .scrollable-image-container::-webkit-scrollbar,
+    body::-webkit-scrollbar {
+      width: 12px;
+      height: 12px;
+    }
+
+    .scrollable-image-container::-webkit-scrollbar-track,
+    body::-webkit-scrollbar-track {
+      background: #f5f5f5;
+      border-radius: 10px;
+    }
+
+    .scrollable-image-container::-webkit-scrollbar-thumb,
+    body::-webkit-scrollbar-thumb {
+      background-color: #cccccc;
+      border-radius: 10px;
+      border: 3px solid #f5f5f5;
+    }
+
+    /* Styling for the scrollable image container */
     .scrollable-image-container {
       position: relative;
       max-height: 80vh;
@@ -37,11 +64,7 @@
       border: 1px solid #ddd;
     }
 
-    .scrollable-image-container img {
-      width: 100%;
-      display: block;
-    }
-
+    /* Styling for the scroll indicator */
     .scroll-indicator {
       position: absolute;
       bottom: 10px;
@@ -70,10 +93,9 @@
           <div class="col-lg-8">
             <h2 class="portfolio-title">Detalhes do Sistema</h2>
             <div class="scrollable-image-container">
-              <img src="assets/img/case-study/case-study-bigu-ong.jpg" alt="Case Study" class="img-fluid">
-              <div class="scroll-indicator" onclick="scrollImage('project-1')">
-                <i class="bx bx-down-arrow-alt"></i>
-              </div>
+              <a href="https://www.figma.com/proto/Co5JnXiRWgpnYiO7qMYTf2/Case-de-Study?node-id=1-1725&t=BlhgxSuLCU6iBq7i-1&scaling=min-zoom&page-id=0%3A1"
+                target="_blank"><img src="assets/img/portfolio/cover-case-bigu.jpg" alt="Case Study"
+                  class="img-fluid"></a>
             </div>
           </div>
 
@@ -90,19 +112,16 @@
               </li>
             </ul>
             <p>
-              Bigu é uma ONG que depende de doações para garantir o ciclo de vida de seus projetos. Por isso, captar o
-              interesse de
-              possíveis doadores e conduzi-los até a doação é crucial. No que diz respeito ao site, o principal desafio
-              era a falta de
-              liberdade criativa devido às limitações da versão gratuita do Elementor, que na época do desenvolvimento
-              do site, era
-              ainda mais restrita. A criação de um site atraente e funcional é essencial para engajar os visitantes e
-              convertê-los em apoiadores ativos.
-              Apesar das limitações, usei técnicas inovadoras de Design de Interação para otimizar a experiência do
-              usuário e destacar
-              a importância das doações. Cada elemento foi cuidadosamente planejado para inspirar confiança e motivar
-              a ação,
-              garantindo que a Bigu pudesse continuar a transformar vidas com seus projetos.
+              Bigu é uma ONG que depende de doações para seus projetos. A principal dificuldade no desenvolvimento do
+              site foi a
+              limitação criativa imposta pela versão gratuita do Elementor. Apesar disso, o site foi desenhado para ser
+              atraente e
+              funcional, visando engajar visitantes e convertê-los em doadores. Técnicas inovadoras de Design de
+              Interação foram
+              usadas para otimizar a experiência do usuário, inspirar confiança e motivar ações, assegurando que a Bigu
+              continue
+              transformando vidas.
+
             </p>
           </div>
         </div>
