@@ -65,18 +65,19 @@ h6 {
 /*--------------------------------------------------------------
 # Header
 --------------------------------------------------------------*/
+/* Estilos do header */
+/* Estilos do header */
 #header {
   position: relative;
   height: 100vh;
-  /* Ajuste conforme necessário */
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   z-index: 997;
   overflow-y: auto;
-  /* Pode ser necessário para conteúdos longos */
 }
+
 #header .container {
   display: flex;
   flex-direction: column;
@@ -94,7 +95,6 @@ h6 {
   left: 0;
   z-index: 1000;
   background-color: rgba(0, 0, 0, 0.8);
-  /* Ajuste a cor de fundo conforme necessário */
 }
 
 /* Estilos para a Logo */
@@ -117,20 +117,28 @@ h6 {
   margin-top: 60px;
 }
 
-#header h1 {
-  font-size: 30px;
-  margin: 0;
-  padding: 0;
-  line-height: 1;
-  font-weight: 700;
-  font-family: "Poppins", sans-serif;
+/* Estilos para as colunas */
+.home-columns {
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+  align-items: flex-start;
 }
 
-#header h1 a,
-#header h1 a:hover {
-  color: #ffffff;
-  line-height: 1;
-  display: inline-block;
+.column {
+  flex: 1;
+  padding: 40px;
+}
+
+/* Estilos para a segunda coluna de texto */
+.text-content {
+  flex: 1;
+  /* Para ocupar todo o espaço disponível */
+  padding: 20px;
+  max-width: calc(100% - 30%);
+  /* Calcula o restante do espaço disponível excluindo a largura da coluna da foto */
+  z-index: 2;
+  /* Z-index maior para que fique sobre a foto */
 }
 
 #header h2 {
@@ -146,18 +154,10 @@ h6 {
   padding-bottom: 6px;
 }
 
-.wdh-maxima {
-  max-width: 600px;
-}
-
-#header img {
-  padding: 0;
-  margin: 0;
-}
-
 #header .social-links {
   margin-top: 40px;
   display: flex;
+  flex-direction: row;
 }
 
 #header .social-links a {
@@ -168,7 +168,7 @@ h6 {
   background: #00000B;
   color: #ffffff;
   line-height: 1;
-  margin-right: 8px;
+  margin: 5px 0;
   border-radius: 50%;
   width: 40px;
   height: 40px;
@@ -193,6 +193,7 @@ h6 {
   height: 50px;
 }
 
+/* Ajustes para dispositivos móveis */
 @media (max-width: 992px) {
   #header h1 {
     font-size: 36px;
@@ -211,6 +212,47 @@ h6 {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+  }
+}
+
+@media (max-width: 768px) {
+  .home-columns {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .photo {
+    display: none;
+    /* Oculta a coluna da foto em dispositivos móveis */
+  }
+
+  .column {
+    width: 100%;
+    padding: 10px;
+  }
+
+  .text-content {
+    text-align: start;
+    padding: 20px;
+    max-width: 100%;
+    /* Ocupa todo o espaço disponível em dispositivos móveis */
+  }
+
+  .social-links {
+    flex-direction: row;
+    margin-top: 20px;
+  }
+
+  .social-links a {
+    margin: 0 5px;
+  }
+
+  #header.header-top {
+    height: 60px;
+  }
+
+  #header.header-top h1 {
+    font-size: 26px;
   }
 }
 
