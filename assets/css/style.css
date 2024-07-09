@@ -25,65 +25,21 @@ body::before {
   align-items: center;
 }
 
-.animated-heading {
-  text-align: flex-start;
-  font-weight: bold;
-  margin: 0;
-}
-
-.highlight {
-  color: #EC0000;
-}
-
 .static-text {
-  font-size: 1.5rem;
-}
-
-.static-text-1 {
+  text-align: flex-start;
+    font-weight: bold;
+    margin: 0;
+    color: #ffff;
   font-size: 2.5rem;
 }
 
-.typing-text {
-  font-size: 2rem;
-  font-weight: 800;
-  white-space: nowrap;
-  overflow: hidden;
-  border-right: 2px solid;
-  width: 22ch;
-  /* Define the width based on the length of the text */
-  animation: typing 4s steps(22, end) 1s infinite normal both, blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-  0% {
-    width: 0;
-  }
-
-  50% {
-    width: 22ch;
-    /* Set this to the length of your text */
-  }
-
-  100% {
-    width: 0;
-  }
-}
-
-@keyframes blink-caret {
-
-  from,
-  to {
-    border-color: transparent;
-  }
-
-  50% {
-    border-color: #fff;
-  }
+.static-text-strong {
+  color: #EC0000;
 }
 
 @media (min-width: 1024px) {
   body::before {
-    background-attachment: fixed;
+  background-attachment: fixed;
   }
 }
 
@@ -110,17 +66,55 @@ h6 {
 # Header
 --------------------------------------------------------------*/
 #header {
-  transition: ease-in-out 0.3s;
   position: relative;
   height: 100vh;
+  /* Ajuste conforme necessário */
   display: flex;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
   z-index: 997;
   overflow-y: auto;
+  /* Pode ser necessário para conteúdos longos */
+}
+#header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-#header * {
-  transition: ease-in-out 0.3s;
+.top-bar {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  /* Ajuste a cor de fundo conforme necessário */
+}
+
+/* Estilos para a Logo */
+.logo {
+  position: fixed;
+  top: 10px;
+  left: 60px;
+  z-index: 1001;
+}
+
+.logo img {
+  height: 50px;
+}
+
+.header-content {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  margin-top: 60px;
 }
 
 #header h1 {
@@ -140,7 +134,7 @@ h6 {
 }
 
 #header h2 {
-  font-size: 21px;
+  font-size: 18px;
   margin-top: 20px;
   font-weight: 500;
   color: #f1f1f1;
@@ -178,6 +172,21 @@ h6 {
 
 #header .social-links a:hover {
   background: #EC0000;
+}
+
+/* Top Logo */
+.top-logo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  z-index: 1000;
+}
+
+.top-logo img {
+  height: 50px;
 }
 
 @media (max-width: 992px) {
@@ -258,7 +267,16 @@ h6 {
 */
 .navbar {
   padding: 0;
-  margin-top: 35px;
+  margin: 0;
+  position: fixed;
+  top: 0;
+  left: 0px;
+  width: calc(100% - 160px);
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 .navbar ul {
@@ -280,9 +298,9 @@ h6 {
 .navbar a,
 .navbar a:focus {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: space-between;
-  padding: 0;
+  padding: 15px;
   font-family: "Poppins", sans-serif;
   font-size: 16px;
   font-weight: 500;
@@ -295,15 +313,16 @@ h6 {
 .navbar a:focus i {
   font-size: 12px;
   line-height: 0;
-  margin-left: 5px;
+  margin-left: 0px;
 }
 
 .navbar a:before {
   content: "";
   position: absolute;
+  line-height: 0;
   width: 0;
   height: 2px;
-  bottom: -4px;
+  bottom: 5px;
   left: 0;
   background-color: #EC0000;
   visibility: hidden;
