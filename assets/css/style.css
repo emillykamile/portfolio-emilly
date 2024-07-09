@@ -10,7 +10,7 @@ body {
 body::before {
   content: "";
   position: fixed;
-  background: #000000 url("../img/Background.jpg") top right no-repeat;
+  background: #000000;
   background-size: cover;
   left: 0;
   right: 0;
@@ -146,6 +146,10 @@ h6 {
   padding-bottom: 6px;
 }
 
+.wdh-maxima {
+  max-width: 600px;
+}
+
 #header img {
   padding: 0;
   margin: 0;
@@ -269,12 +273,9 @@ h6 {
   padding: 0;
   margin: 0;
   position: fixed;
-  min-height: 55px;
   top: 0;
-  left: 0px;
   width: calc(100% - 160px);
   z-index: 1000;
-  background-color: rgba(0, 0, 0, 0.8);
   display: flex;
   justify-content: flex-end;
   align-items: center;
